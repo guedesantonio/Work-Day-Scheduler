@@ -4,13 +4,21 @@ var textboxArray = $(".form-control");
 //the function and I am passing in the elements in the array
 textboxArray.forEach(function(myElement){{
           if ( this.moment === "ago" ) {
-            this.style.color = ".past";
+            this.classList.remove('.future');
+            this.classList.remove('.present');
+            this.classList.add (".past");
+            
+            
           } 
             else if (this.moment === "from now") {
-                this.style.color = ".future";
+                this.classList.remove('.past');
+                this.classList.remove('.present');
+                this.classList.add (".future");
                 }
                 else {
-                    this.style.color = ".present";
+                    this.classList.remove('.future');
+                    this.classList.remove('.past');
+                    this.classList.add (".future");
                 }
             
         };
