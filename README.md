@@ -17,7 +17,7 @@ A simple calendar application that allows the user to save events for each hour 
 Completed.
 
 ## Deployment
-You can find the live site at: ??
+You can find the live site at: https://guedesantonio.github.io/Work-Day-Scheduler/
 
 ## References
 https://getbootstrap.com/ - Bootstrap library
