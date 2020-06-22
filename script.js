@@ -1,10 +1,10 @@
-//array to hold the hour titles of each timeblock
+//variable containing each time of the day
 
 var hours=["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
-//sets the day of the week at the top of the page
+//add the current day at the top of the page
 $("#currentDay").text(moment().format('dddd MMMM Do'));
 
-//update color of the timeblocks based on time of day
+//colors updated based on current time
 var colorUpdater = function(time){
     var hour = parseInt((time.split(":"))[0]) + 3;
     for(var i = 0; i<hours.length;i++){
@@ -27,26 +27,26 @@ var colorUpdater = function(time){
     }
 };
 
-//time managing function
+//function to manage time
 setInterval(function(){
-    //Local Time
+    //Localtime
     var time = moment().format('LT');
     $("#currentTime").text(time);
     colorUpdater(time);
 }, 1000);
 
-//initialize time block function
-var createTimeBlocks = function(){
 
-    //loop through work hours
+//createTimeBlocks function
+var createTimeBlocks = function(){
+    //loop through hours
     for(i=0; i<hours.length;i++){
         
-        //create hour
+        //create hour div
         var hour = $("<div>")
             .addClass("col-1 hour")
             .text(hours[i]);
 
-        //create task
+        //create task div
         var task = $("<p>")
             .addClass("description")
             .attr("id", "task-" + i);    
@@ -55,7 +55,7 @@ var createTimeBlocks = function(){
             .addClass('col-10 textarea past')           
             .append(task);
 
-        //create save button
+        //create save button 
         var buttonLogo = $("<span>")
             .addClass("oi oi-box")
 
@@ -76,7 +76,7 @@ var createTimeBlocks = function(){
             //append row to container
         $("#timeBlockHolder").append(row);
 
-        //if localStorage exists, populate task
+        //checks localStorage and if so, populate task
         var loadTasks = function(id){
             var task = JSON.parse(localStorage.getItem("save-"+id));
 
