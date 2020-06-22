@@ -1,6 +1,6 @@
 //array to hold the hour titles of each timeblock
 
-var hours=["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
+var hours=["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
 //sets the day of the week at the top of the page
 $("#currentDay").text(moment().format('dddd MMMM Do'));
 
@@ -133,15 +133,15 @@ var createTimeBlocks = function(){
 createTimeBlocks();
 window.onload = function(){
     colorCode();
-    nineAM();
-    tenAM();
-    elevenAM();
-    twelvePM();
-    onePM();
-    twoPM();
-    threePM();
-    fourPM();
-    fivePM();
+    nineam();
+    tenam();
+    elevenam();
+    twelvepm();
+    onepm();
+    twopm();
+    threepm();
+    fourpm();
+    fivepm();
    }
   
   // WHEN I open the planner
@@ -233,7 +233,7 @@ window.onload = function(){
   // WHEN I refresh the page
   // THEN the saved events persist
   
-  function nineAM() {
+  function nineam() {
     var input_textarea = document.querySelector("#comment9am");
     var output_div = document.querySelector("#comment9am");
     var save_button = document.querySelector("#button9am");
@@ -252,7 +252,7 @@ window.onload = function(){
   
   
   
-  function tenAM() {
+  function tenam() {
     var input_textarea2 = document.querySelector("#comment10am");
     var output_div2 = document.querySelector("#comment10am");
     var save_button2 = document.querySelector("#button10am");
@@ -270,7 +270,7 @@ window.onload = function(){
   }
   
   
-  function elevenAM() {
+  function elevenam() {
     var input_textarea3 = document.querySelector("#comment11am");
     var output_div3 = document.querySelector("#comment11am");
     var save_button3 = document.querySelector("#button11am");
@@ -288,7 +288,7 @@ window.onload = function(){
   }
   
   
-  function twelvePM() {
+  function twelvepm() {
     var input_textarea4 = document.querySelector("#comment12pm");
     var output_div4 = document.querySelector("#comment12pm");
     var save_button4 = document.querySelector("#button12pm");
@@ -306,7 +306,7 @@ window.onload = function(){
   }
   
   
-  function onePM() {
+  function onepm() {
     var input_textarea5 = document.querySelector("#comment1pm");
     var output_div5 = document.querySelector("#comment1pm");
     var save_button5 = document.querySelector("#button1pm");
@@ -324,7 +324,7 @@ window.onload = function(){
   }
   
   
-  function twoPM() {
+  function twopm() {
     var input_textarea6 = document.querySelector("#comment2pm");
     var output_div6 = document.querySelector("#comment2pm");
     var save_button6 = document.querySelector("#button2pm");
@@ -342,7 +342,7 @@ window.onload = function(){
   }
   
   
-  function threePM() {
+  function threepm() {
     var input_textarea7 = document.querySelector("#comment3pm");
     var output_div7 = document.querySelector("#comment3pm");
     var save_button7 = document.querySelector("#button3pm");
@@ -360,7 +360,7 @@ window.onload = function(){
   }
   
   
-  function fourPM() {
+  function fourpm() {
     var input_textarea8 = document.querySelector("#comment4pm");
     var output_div8 = document.querySelector("#comment4pm");
     var save_button8 = document.querySelector("#button4pm");
@@ -378,7 +378,7 @@ window.onload = function(){
   }
   
   
-  function fivePM() {
+  function fivepm() {
     var input_textarea9 = document.querySelector("#comment5pm");
     var output_div9 = document.querySelector("#comment5pm");
     var save_button9 = document.querySelector("#button5pm");
